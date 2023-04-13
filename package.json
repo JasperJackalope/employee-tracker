@@ -4,7 +4,8 @@
     "description": "A description of my Node.js project",
     "main": "server.js",
     "dependencies": {
-      "mysql2": "^2.3.0",
-      "inquirer": "^8.1.2"
+        "express": "^4.18.2",
+        "inquirer": "^8.1.2",
+        "mysql2": "^2.3.0"
     }
-  }
+}
