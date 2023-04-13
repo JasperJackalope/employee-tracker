@@ -15,11 +15,11 @@ INSERT INTO roles (title, salary, department_id) VALUES
   ('UI/UX Designer', 90000.00, 4);
 
 INSERT INTO employees (first_name, last_name, role_id, manager_id) VALUES
-  ('John', 'Doe', 1, NULL),
-  ('Jane', 'Smith', 2, 1),
-  ('Bob', 'Johnson', 3, NULL),
-  ('Sara', 'Lee', 4, 3),
-  ('Mike', 'Jones', 5, NULL),
-  ('Karen', 'Lee', 6, 5),
-  ('David', 'Nguyen', 7, 4),
-  ('Emily', 'Chen', 8, 7);
+  ('Ronald', 'Miller', 1, NULL),
+  ('Josie', 'McCoy', 2, 1),
+  ('Cindy', 'Mancini', 3, NULL),
+  ('Melody', 'Valentine', 4, 3),
+  ('Geri', 'Halliwell', 5, NULL),
+  ('Katie', 'Cipriano', 6, 5),
+  ('Valerie', 'Brown', 7, 4),
+  ('Jason', 'Voorhees', 8, 7);
