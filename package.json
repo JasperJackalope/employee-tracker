@@ -1,0 +1,10 @@
+{
+    "name": "employee-tracker",
+    "version": "1.0.0",
+    "description": "A description of my Node.js project",
+    "main": "server.js",
+    "dependencies": {
+      "mysql2": "^2.3.0",
+      "inquirer": "^8.1.2"
+    }
+  }
