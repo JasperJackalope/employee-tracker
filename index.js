@@ -164,9 +164,59 @@ function mainMenu() {
                       });
                     break;
                   
-          case 'Update an employee role':
-            // TODO: Handle update an employee role option
-            break;
+                    case 'Update an employee role':
+                        // Get a list of all employees
+                        pool.query('SELECT * FROM employees', (err, results) => {
+                          if (err) {
+                            console.error(err);
+                            return;
+                          }
+                      
+                          // Create an array of choices for the user to select from
+                          const employeeChoices = results.map((employee) => ({
+                            name: `${employee.first_name} ${employee.last_name}`,
+                            value: employee.id,
+                          }));
+                      
+                          // Prompt the user to select an employee to update
+                          inquirer
+                            .prompt({
+                              type: 'list',
+                              name: 'employeeId',
+                              message: 'Select an employee to update:',
+                              choices: employeeChoices,
+                            })
+                            .then((employeeAnswer) => {
+                              // Prompt the user to enter the new role ID for the selected employee
+                              inquirer
+                                .prompt({
+                                  type: 'input',
+                                  name: 'newRoleId',
+                                  message: 'Enter the new role ID:',
+                                })
+                                .then((roleAnswer) => {
+                                  const { employeeId } = employeeAnswer;
+                                  const { newRoleId } = roleAnswer;
+                      
+                                  // Update the employee's role in the database
+                                  pool.query(
+                                    'UPDATE employees SET role_id = ? WHERE id = ?',
+                                    [newRoleId, employeeId],
+                                    (err, results) => {
+                                      if (err) {
+                                        console.error(err);
+                                        return;
+                                      }
+                      
+                                      console.log(`Employee's role has been updated`);
+                                      mainMenu();
+                                    }
+                                  );
+                                });
+                            });
+                        });
+                        break;
+                      
           case 'Exit':
             console.log('Goodbye!');
             process.exit();
