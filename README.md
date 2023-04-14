@@ -18,7 +18,7 @@ For this assignment, I was asked to created a terminal application to be used as
 
 ## Installation
 
-Node.js (https://nodejs.org/en/download), the Inquirer Package (https://www.npmjs.com/package/inquirer), and the MySql Package (https://www.npmjs.com/package/mysql) are necessary to run this application in the terminal. 
+Node.js (https://nodejs.org/en/download), the Inquirer Package (https://www.npmjs.com/package/inquirer), the Console.Table Package (https://www.npmjs.com/package/console.table/v/0.10.0) and the MySql Package (https://www.npmjs.com/package/mysql) are necessary to run this application in the terminal. 
 
 ## Usage
 
