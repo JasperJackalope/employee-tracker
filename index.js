@@ -75,7 +75,6 @@ function mainMenu() {
                         console.error(err);
                         return;
                       }
-              
                       console.log(`Department "${name}" has been added with ID ${results.insertId}`);
                       mainMenu();
                     });
@@ -103,7 +102,6 @@ function mainMenu() {
                       .prompt(roleQuestions)
                       .then((answers) => {
                         const { title, salary, department_id } = answers;
-                  
                         pool.query(
                           'INSERT INTO roles (title, salary, department_id) VALUES (?, ?, ?)',
                           [title, salary, department_id],
@@ -112,7 +110,6 @@ function mainMenu() {
                               console.error(err);
                               return;
                             }
-                  
                             console.log(`Role "${title}" has been added with ID ${results.insertId}`);
                             mainMenu();
                           }
@@ -197,7 +194,6 @@ function mainMenu() {
                                         console.error(err);
                                         return;
                                       }
-                      
                                       console.log(`Employee's role has been updated`);
                                       mainMenu();
                                     }
