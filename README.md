@@ -46,6 +46,6 @@ Thank you to instructors Bryan and Shawn for their un-ending patience. I used W3
 
 ## Questions
 
-My GitHub username is JasperJackalope and here is a link to the repository for this project: https://github.com/JasperJackalope/12-employee-tracker
+My GitHub username is JasperJackalope and here is a link to the repository for this project: https://github.com/JasperJackalope/employee-tracker
 
 A link to the demonstration video:  https://drive.google.com/file/d/1JfsFC4Ro75L5L91A8trCgJCP8dPSFbMi/view?usp=sharing
